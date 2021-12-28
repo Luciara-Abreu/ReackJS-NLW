@@ -18,7 +18,7 @@ Na pasta publico deixar somente o arquivo index.html
 Na pasta src deixar somente os arquivos App.tsx,
 index.tsx e react-app-env.d.ts
 
-# Instalação do Firebase 8.0.0
+# Instalação do Firebase 8.6.7
 * professor versão : v1.22.5
 * minha versão:v1.22.17 - TIVE QUE TROCAR DE VERSÃO PARA 8
 ************************************************************
@@ -61,7 +61,10 @@ export const database = firebase.database();
 
 [] Após todas as atualizações vamos chamar o import './services/firebase'; dentro do arquivo index da nossa aplicação. E isso iá dar o start no nosso banco de dados.
 
--- PARA PARA OS ERROS TIVE QUE VOLTAR A VERSÃO DO FIREBASE PARA 8.0.0
+-- PARA PARAR OS ERROS TIVE QUE VOLTAR A VERSÃO DO FIREBASE PARA 8.6.7
+yarn add firebase@^8.6.7
+Caso queira remover => yarn remove firebase 
+
 [ok] Erro => error Command failed with exit code 1.
     -  Possíveis Soluções tiradas da web.
       [ok] rm -rf node_modules && yarn cache clean && yarn do forum => https://stackoverflow.com/questions/61611766/yarn-start-command-failed-with-exit-code-1
@@ -77,5 +80,15 @@ export const database = firebase.database();
 específica por algum problema, então para não perder tempo vamos instalar a 
 versão infomada no comando => yarn add node-sass@^5.0.0
 Diz que a versão 6 não é suportada pelo creat reac-app
- 
 
+************************************************************************
+SASS
+yarn add node-sass@^5.0.0
+CSS 
+cor linda!! => #b180b1;
+ ************************************************************************
+Após ter subido o commit => "Tela Home - botões e cores ok", instalei a mesma 
+versão do react router dom do profe => yarn add react-router-dom@^5.2.0
+e também o pacote => yarn add @types/react-router-dom@^5.1.7 -D 
+para incluir as definições de tipos.... e assim poder criar as rotas e 
+navegar entre as páginas. 
