@@ -1,0 +1,22 @@
+import firebase from 'firebase/app';
+import 'firebase/auth';
+import 'firebase/database';
+
+// Configuração do Firebase do seu aplicativo da web
+const firebaseConfig = {
+  apiKey: process.env.REACT_APP_API_KEY,
+  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+  databaseURL: process.env.REACT_APP_DATABASE_URL,
+  projectId: process.env.REACT_APP_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_APP_ID
+};
+
+// Initialize Firebase / do firebase
+//const app = initializeApp(firebaseConfig);
+// Initialize do professors
+firebase.initializeApp(firebaseConfig);
+
+const auth = firebase.auth();
+const database = firebase.database();
