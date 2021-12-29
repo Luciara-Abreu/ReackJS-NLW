@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import illustrationImg from '../assets/images/illustration.svg';
 import logoImg from '../assets/images/logo.svg';
 import GoogleImg from '../assets/images/google-icon.svg';
@@ -12,9 +12,10 @@ import { database } from '../services/firebase';
 
 export function NewRoom() {
   const { user } = useAuth();
-
+  const history = useHistory();
   //Estado que armazenará o valor do input digitado pelo usuário logado.
   const [newRoom, setNewRoom] = useState('');
+
 
   async function handleCreateRoom(event: FormEvent) {
     event.preventDefault();
@@ -31,6 +32,8 @@ export function NewRoom() {
       title: newRoom,
       authorID: user?.id,
     })
+
+    history.push(`/rooms/${firebaseRoom.key}`);
   }
 
   return (
