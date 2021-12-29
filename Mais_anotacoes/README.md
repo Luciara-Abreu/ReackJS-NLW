@@ -92,3 +92,21 @@ versão do react router dom do profe => yarn add react-router-dom@^5.2.0
 e também o pacote => yarn add @types/react-router-dom@^5.1.7 -D 
 para incluir as definições de tipos.... e assim poder criar as rotas e 
 navegar entre as páginas. 
+************************************************************************
+[] Sempre que quisermos compartilhar informações, objetos...  dentro da aplicação, iremos usar o conceito de contextos do react. (informações compartilhadas entre 
+vários componentes usaremos contextos)
+Exemplo.: 
+const TestContext = createContext('');
+
+function App() {
+  return (
+    <BrowserRouter>
+      <TestContext.Provider value={'Teste'}>
+        <Route path='/' exact component={Home} />
+        <Route path='/rooms/new' component={NewRoom} />
+      </TestContext.Provider>
+    </BrowserRouter>
+  );
+}
+
+
