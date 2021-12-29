@@ -5,11 +5,33 @@ import GoogleImg from '../assets/images/google-icon.svg';
 import { Button } from '../components/Button';
 import '../styles/auth.scss';
 import { useAuth } from '../hooks/UseAuth';
+import { FormEvent, useState } from 'react';
+import { database } from '../services/firebase';
 
 
 
 export function NewRoom() {
   const { user } = useAuth();
+
+  //Estado que armazenará o valor do input digitado pelo usuário logado.
+  const [newRoom, setNewRoom] = useState('');
+
+  async function handleCreateRoom(event: FormEvent) {
+    event.preventDefault();
+
+    //vamos criar as salas...
+    //Caso o usuário digitou só espaços,não será possível criar a sala. 
+    if (newRoom.trim() === '') {
+      return;
+    }
+
+    const roomRef = database.ref('rooms');
+
+    const firebaseRoom = await roomRef.push({
+      title: newRoom,
+      authorID: user?.id,
+    })
+  }
 
   return (
     <div id="page-auth">
@@ -22,10 +44,13 @@ export function NewRoom() {
         <div className="main-content">
           <img src={logoImg} alt="Letmeask" />
           <h2>Criar uma nova sala</h2>
-          <form>
+          <form onSubmit={handleCreateRoom}>
             <input
               type="text"
-              placeholder="Nome da sala" />
+              placeholder="Nome da sala"
+              onChange={event => setNewRoom(event.target.value)}
+              value={newRoom}
+            />
             <Button type="submit"> Criar sala </Button>
           </form>
           <p>Quer entrar em uma sala existente? <Link to="/">Clique aqui</Link></p>
