@@ -26,10 +26,10 @@ export function Room() {
   const { title, questions } = UseRoom(roomId);
 
 
-  async function handleLikedQuestion(questionId: string, likeId: string | undefined) {
+  async function handleLikedQuestion(questionId: string, likeId: String | undefined) {
     // funcionalidade do like 
     if (likeId) {
-      // remover like
+      await database.ref(`rooms/${roomId}/questions/${questionId}/likes/${likeId}`).remove();
     } else { // cadastrar like
       await database.ref(`rooms/${roomId}/questions/${questionId}/likes`).push({
         authorID: user?.id,
