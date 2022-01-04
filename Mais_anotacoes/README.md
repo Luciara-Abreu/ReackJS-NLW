@@ -108,5 +108,17 @@ function App() {
     </BrowserRouter>
   );
 }
+************************************************************************
+Curso quase completo, agora vamos hospedar
+para isso temos que instalar o firebase-tools .
+Porém ao tentar instalar o meu estava dando erros e tive que pegar outros 
+tutoriais de como hospedar o projeto com firebase.... 
+E através desse vídeo https://youtu.be/KFAGTuGdQcM eu entendi que tinha que criar 
+uma outra pasta e instalar lá dentro o firebase-tools.... com o comando 
+yarn global add firebase-tools
+e depois fazer o firebase login 
+
+depois yarn build 
+depois firebase deploy
 
 
