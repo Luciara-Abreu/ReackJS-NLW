@@ -7,6 +7,20 @@
   & + .question {
     margin-top: 8px;
   }
+  &.highlighted {
+    background: #f4f0ff;
+    border: 0.5px solid #dcd6ee;
+    
+    footer .user-info{
+      color: #29292e, 100%;
+    }
+  }
+  
+  &.answered {
+    background: #dbdcdd;
+    border: 0.5px solid #dcd6ee;
+  }
+
 
   p {
     color: #29292e;
@@ -33,6 +47,11 @@
         color: #737380;
         font-size: 14px;
       }
+    }
+
+    > div{
+      display: flex;
+      gap: 10px;
     }
 
     button {
