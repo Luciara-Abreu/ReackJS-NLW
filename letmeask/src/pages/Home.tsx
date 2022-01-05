@@ -2,6 +2,7 @@ import { useHistory } from 'react-router-dom'
 import { FormEvent, useState } from 'react';
 
 import illustrationImg from '../assets/images/illustration.svg'
+import codivasImg from '../assets/images/codivas Logo branco horinzontal transp.svg'
 import logoImg from '../assets/images/logo.svg';
 import googleIconImg from '../assets/images/google-icon.svg';
 
@@ -53,8 +54,12 @@ export function Home() {
     <div id="page-auth">
       <aside>
         <img src={illustrationImg} alt="Ilustração simbolizando perguntas e respostas" />
-        <strong>Crie salas de Q&amp;A ao-vivo</strong>
-        <p>Tire as dúvidas da sua audiência em tempo-real</p>
+        <div>
+          <strong>Crie salas de Q&amp;A ao-vivo</strong>
+          <p>Tire as dúvidas da sua em tempo-real com o
+            <img src={codivasImg} alt="logo-codivas" />
+          </p>
+        </div>
       </aside>
       <main>
         <div className="main-content">
