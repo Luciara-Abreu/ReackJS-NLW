@@ -1,6 +1,7 @@
 html{
 // A cada 1rem será considerado 10px
 font-size: 62.5%;
+
   
 #page-auth {
   display: flex;
@@ -29,15 +30,17 @@ font-size: 62.5%;
       background: #b180b1;
       color: #FFF;
 
+        
     strong {
       font: 700 3.2rem 'Poppins', sans-serif;
-      line-height: 80%;
+      line-height: 8.0rem;
       margin: 3% 5% 3% 5%;
     }
+  
 
     p {
       font-size: 1.2em;
-      line-height: 2%;
+      line-height: 0.02rem;
       margin: 1% 5% 4% 10%;
 
       img{  
@@ -56,9 +59,9 @@ font-size: 62.5%;
   main {
     flex: 8;
     width: 90%;
-    max-width: 980px;
+    max-width: 98.0erm;
 
-    padding: 0 32px;
+    padding: 0 3.2erm;
 
     display: flex;
     align-items: center;
