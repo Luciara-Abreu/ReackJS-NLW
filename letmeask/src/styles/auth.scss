@@ -1,21 +1,24 @@
 html{
 // A cada 1rem será considerado 10px
 font-size: 62.5%;
-
-  
 #page-auth {
+  @media only screen and (min-width: 100px) and (max-width: 600px){
+    display: grid;
+    grid-template-columns: 2fr;
+  }
   display: flex;
   align-items: stretch;
-  height: 100vh;
+  height: 100vh;  
 
   aside {
     flex: 7;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: #b180b1;
+    background: #d69ed6;
     color: #FFF;
     
+
     img {
       width: auto;
       max-width: 44%;
@@ -27,31 +30,30 @@ font-size: 62.5%;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      background: #b180b1;
-      color: #FFF;
-
         
-    strong {
+      strong {
       font: 700 3.2rem 'Poppins', sans-serif;
       line-height: 8.0rem;
-      margin: 3% 5% 3% 5%;
+      margin: 0.03rem 0.05rem 0.03rem 05rem;
+        }  
+    
     }
   
 
-    p {
+      p {
       font-size: 1.2em;
       line-height: 0.02rem;
       margin: 1% 5% 4% 10%;
 
-      img{  
-    margin: 4% 10% 2% 15%;
-    background: #b180b1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-        }
-    }
+          img{  
+        margin: 4% 10% 2% 15%;
+        background: #d69ed6;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+            }
+      }
   }
 
   }
@@ -165,5 +167,4 @@ font-size: 62.5%;
       margin-left: 16px;
     }
   }
-}
 }
